@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class LineCompressionUC1 {
 
-	//uc2 ---Length of line is equal or not
+	//uc3---Length of line is equal or not using compareTo
 	public void lineCompare()
 	{
 		Scanner sc=new Scanner(System.in);
@@ -26,29 +26,32 @@ public class LineCompressionUC1 {
 		double sq1=Math.sqrt(sum1);
 		System.out.println("The Length of Line 1 is :"+ sq1);
 		String a1=String.valueOf(sq1);
-
+		
 		//calculate length for line 2
 		double power3=Math.pow(m2-m1, 2);
 		double power4=Math.pow(n2-n1, 2);
 		double sum2=(power3+power4);
 		double sq2=Math.sqrt(sum2);
 		System.out.println("The Length of Line 2 is:"+ sq2);
-		String a2=String.valueOf(sq2);// String.valuOf is used to conv double to string
+		String a2=String.valueOf(sq1);// String.valuOf is used to conv double to string
 		
-//		double sq1=Math.sqrt((x2-x1^2)+(y2-y1^2));
-//		int i=(int)sq1;
-//		double sq2=Math.sqrt((m2-m1^2)+(n2-n1^2));
-//		int j=(int)sq2;
 		//equating both the lines
-		if(a1.equals(a2))
+		
+		System.out.println(a1.compareTo(a2));//0
+		
+		if(a1.compareTo(a2)>0)
 		{
-			System.out.println("Both the Lines are Equal");
+			System.out.println("Line 1 is greater than Line 2");
 		}
-		else
+		else if(a1.compareTo(a2)<0)
 		{
-			System.out.println("Both the lines are not Equal");
+			System.out.println("Line 1 is less than Line 2");
 		}
-	}
+		else // prints 0 means equal
+		{
+			System.out.println("Both Line 1 and Line 2 are equal");
+		}
+}
 	public static void main(String[] args) {
 		LineCompressionUC1 obj=new LineCompressionUC1();
 		obj.lineCompare();
