@@ -33,11 +33,11 @@ public class LineCompressionUC1 {
 		double sum2=(power3+power4);
 		double sq2=Math.sqrt(sum2);
 		System.out.println("The Length of Line 2 is:"+ sq2);
-		String a2=String.valueOf(sq1);// String.valuOf is used to conv double to string
+		String a2=String.valueOf(sq2);// String.valuOf is used to conv double to string
 		
 		//equating both the lines
 		
-		System.out.println(a1.compareTo(a2));//0
+	//	System.out.println(a1.compareTo(a2));//0
 		
 		if(a1.compareTo(a2)>0)
 		{
